@@ -9,7 +9,7 @@ def Password_Cracking():
     #x=['cs','123','2020']
     #x=['vic','tim']
     dictionary =[]
-    for i in range(4):
+    for i in range(9):
         y = list(itertools.permutations(x, i + 1))
         for j in range(len(y)):
             password=""
